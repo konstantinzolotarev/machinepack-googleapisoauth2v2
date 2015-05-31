@@ -7,7 +7,7 @@ module.exports = {
   description: 'Get information using given Access Token',
 
 
-  cacheable: false,
+  cacheable: true,
 
 
   sync: false,
@@ -17,7 +17,25 @@ module.exports = {
 
 
   inputs: {
+    access_token: {
+      example: '',
+      description: ''
+    },
 
+    id_token: {
+      example: '',
+      description: ''
+    },
+
+    token_handle: {
+      example: '',
+      description: ''
+    },
+
+    fields: {
+      example: 'access_type,audience,expires_in,issued_to,scope,token_handle,user_id,verified_email,email',
+      description: 'Selector specifying which fields to include in a partial response.'
+    }
   },
 
 
@@ -31,8 +49,7 @@ module.exports = {
   },
 
 
-  fn: function (inputs,exits
-  /**/) {
+  fn: function(inputs, exits) {
     return exits.success();
   },
 

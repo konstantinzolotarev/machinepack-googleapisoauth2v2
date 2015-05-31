@@ -1,3 +1,9 @@
+'use strict';
+
+var _ = require('lodash');
+var google = require('googleapis');
+var oauth2 = google.auth.OAuth2;
+
 module.exports = {
 
 
@@ -7,7 +13,7 @@ module.exports = {
   description: 'Get Cert information for OpenId connect',
 
 
-  cacheable: false,
+  cacheable: true,
 
 
   sync: false,
@@ -17,7 +23,10 @@ module.exports = {
 
 
   inputs: {
-
+    fields: {
+      example: 'keys(alg,e,kid,kty,use,n)',
+      description: 'Selector specifying which fields to include in a partial response.'
+    }
   },
 
 
@@ -31,8 +40,7 @@ module.exports = {
   },
 
 
-  fn: function (inputs,exits
-  /**/) {
+  fn: function(inputs, exits) {
     return exits.success();
   },
 
