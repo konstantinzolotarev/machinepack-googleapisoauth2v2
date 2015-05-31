@@ -1,0 +1,31 @@
+{
+  "name": "machinepack-googleapisoauth2v2",
+  "version": "0.1.0",
+  "description": "Work with Google OAuth2 API",
+  "scripts": {
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
+  },
+  "keywords": [
+    "Google APIs OAuth2 v2",
+    "machines",
+    "machinepack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "machine": "^9.0.0"
+  },
+  "devDependencies": {
+    "test-machinepack-mocha": "^2.0.0"
+  },
+  "machinepack": {
+    "friendlyName": "Google APIs OAuth2 v2",
+    "machineDir": "machines/",
+    "machines": [
+      "get-token-info",
+      "get-cert-for-openid-connect",
+      "get-user-info",
+      "get-v2-me-userinfo"
+    ]
+  }
+}
