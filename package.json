@@ -20,14 +20,16 @@
   "devDependencies": {
     "test-machinepack-mocha": "^2.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/konstantinzolotarev/machinepack-googleapisoauth2v2.git"
+  },
   "machinepack": {
     "friendlyName": "Google APIs OAuth2 v2",
     "machineDir": "machines/",
     "machines": [
-      "get-token-info",
-      "get-cert-for-openid-connect",
-      "get-user-info",
-      "get-v2-me-userinfo"
+      "get-login-url",
+      "get-access-token"
     ]
   }
 }
