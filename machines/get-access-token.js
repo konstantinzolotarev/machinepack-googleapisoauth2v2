@@ -67,6 +67,11 @@ module.exports = {
     invalidRequest: {
       variableName: 'err',
       description: 'Triggers if some of input variables are wrong.'
+    },
+
+    invalidToken: {
+      variableName: 'err',
+      description: 'Triggers if code is wrong.'
     }
 
   },
@@ -80,9 +85,13 @@ module.exports = {
         if (!err.code) {
           return exits.error(err);
         }
+        console.log(err);
         switch(err.code) {
           case 400:
             return exits.invalidRequest(err);
+            break;
+          case 401:
+            return exits.invalidToken(err);
             break;
           default:
             return exits.error(err);

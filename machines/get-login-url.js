@@ -51,7 +51,8 @@ module.exports = {
     scope: {
       example: ['https://www.googleapis.com/auth/plus.me'],
       description: 'List of urls that you need to asks permissions for',
-      typeclass: 'array'
+      typeclass: 'array'//,
+      // required: true
     },
 
     accessType: {
@@ -76,9 +77,13 @@ module.exports = {
     var params = {};
     if (inputs.scope && _.isArray(inputs.scope)) {
       params.scope = inputs.scope;
-    };
+    }
+
     if (inputs.accessType && _.isString(inputs.accessType)) {
-      params.scope = inputs.accessType;
+      params.access_type = inputs.accessType;
+    }
+    if (!params.scope) {
+      params.scope = ['https://www.googleapis.com/auth/plus.me'];
     }
 
     try {
