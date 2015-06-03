@@ -82,7 +82,7 @@ module.exports = {
     }
 
     try {
-      var oauth2Client = var oauth2Client = require('../lib/getOAuth2Client')(inputs);
+      var oauth2Client = require('../lib/getOAuth2Client')(inputs);
       return exits.success(oauth2Client.generateAuthUrl(params || {}));
     } catch(err) {
       return exits.error(err);

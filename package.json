@@ -7,6 +7,10 @@
   },
   "keywords": [
     "Google APIs OAuth2 v2",
+    "Google",
+    "google api",
+    "oauth",
+    "oauth2",
     "machines",
     "machinepack"
   ],
@@ -29,7 +33,8 @@
     "machineDir": "machines/",
     "machines": [
       "get-login-url",
-      "get-access-token"
+      "get-access-token",
+      "get-oauth2-client"
     ]
   }
 }
